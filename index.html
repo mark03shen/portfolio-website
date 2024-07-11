@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Mark Freires E-Porfolio</title>
+    
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: #d8ffd6;
+        color: #333;
+    }
+    .img {
+
+    }
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+/* Header styles */
+    header {
+        background-color: #434618;
+        color: #d8ffd6;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    .logo {
+        float: left;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .nav-links {
+        float: right;
+        list-style: none;
+        margin-top: 5px;
+    }
+    .nav-links li {
+        display: inline;
+        margin-left: 20px;
+    }
+    .nav-links li a {
+        color: 	#c6f4c2;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .nav-links li a:hover {
+        color: #14b385;
+    }
+/* Hero section styles */
+    .hero {
+        background: url('hero-bg.jpg') center/cover no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #434618;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #14b385;
+        color: #333;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #119b85;
+    }
+/* About section styles */
+    .about {
+    padding: 100px 0;
+    }
+    .about h2 {
+    font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about p {
+        font-size: 1.1rem;
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+    }
+/* Portfolio section styles */
+    .portfolio {
+        padding: 100px 0;
+    }
+    .portfolio h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .portfolio-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+    }
+    .portfolio-item {
+        background-color: #7dde92;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .portfolio-item img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .portfolio-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .portfolio-item p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .portfolio-item a {
+        display: inline-block;
+        background-color: #14b385;
+        color: #333;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .portfolio-item a:hover {
+        background-color: #119b85;
+    }
+/* Contact section styles */
+    .contact {
+        padding: 100px 0;
+        background-color: #d8ffd6;
+        text-align: center;
+    }
+    .contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .contact form {
+        max-width: 600px;
+        margin: auto;
+    }
+    .contact form input,
+    .contact form textarea {
+        display: block;
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    .contact form button {
+        background-color: #14b385;
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .contact form button:hover {
+        background-color: #119b85;
+    }
+/* Footer styles */
+    footer {
+        background-color: #333;
+        color: 	#c6f4c2;
+        text-align: center;
+        padding: 20px 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons a {
+        color: 	#c6f4c2;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+        color: #24B0AC;
+    }
+
+</style>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">My E-Porfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to My E-Portfolio</h1>
+            <img src="my_pic.png" height="200" width="200">
+            <p>Developer & Designer</p>
+            <a href="#portfolio" class="btn">View Portfolio</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Hello! I'm Richard Mark Freires</h2>
+            <p>I am passionate about creating clean, unique, and usable 
+                websites that enhance user experience.
+                a passionate IT developer with a strong background in software development, 
+                web technologies, and problem-solving.
+                I thrive on creating innovative solutions and optimizing processes to drive efficiency and productivity 
+            </p>
+            <p>Let's work together to turn your ideas into reality.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio Projects</h2>
+            <div class="portfolio-items">
+                <!-- portfolio items -->
+                <div class="portfolio-item">
+                    <h3>My Resume</h3>
+                    <p>My online resume using HTML and CSS code</p>
+                    <a href="https://mark03shen.github.io/online_resume/">View Details</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>My Project Calculator</h3>
+                    <p>My online resume using HTML and CSS code</p>
+                    <a href="https://mark03shen.github.io/calculator/">View Details</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>My Rock-Paper-Scissor Game</h3>
+                    <p>My online resume using HTML and CSS code</p>
+                    <a href="https://mark03shen.github.io/rock-paper-scissor/">View Details</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="submit-form.php" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Richard Mark Freires. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling on anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
